@@ -6,9 +6,9 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 class CameraPoseVisualizer:
     def __init__(self, xlim, ylim, zlim):
-        self.fig = plt.figure(figsize=(18, 7))
+        self.fig = plt.figure(figsize=(12, 12))
         self.ax = self.fig.gca(projection='3d')
-        self.ax.set_aspect("auto")
+        # self.ax.set_aspect("auto")
         self.ax.set_xlim(xlim)
         self.ax.set_ylim(ylim)
         self.ax.set_zlim(zlim)
@@ -45,6 +45,6 @@ class CameraPoseVisualizer:
         norm = mpl.colors.Normalize(vmin=0, vmax=max_frame_length)
         self.fig.colorbar(mpl.cm.ScalarMappable(norm=norm, cmap=cmap), orientation='vertical', label='Frame Number')
 
-    def show(self):
-        plt.title('Extrinsic Parameters')
+    def show(self,title='Extrinsic Parameters'):
+        plt.title(title)
         plt.show()

@@ -4,7 +4,6 @@ import matplotlib as plt
 from util.camera_pose_visualizer import CameraPoseVisualizer
 from util.camera_parameter_loader import CameraParameterLoader
 
-
 def plot_scenewise():
     loader = CameraParameterLoader()
     visualizer = CameraPoseVisualizer([-50, 50], [-50, 50], [0, 100])
